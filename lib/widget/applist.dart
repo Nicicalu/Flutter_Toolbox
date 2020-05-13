@@ -21,9 +21,6 @@ class AppList extends StatelessWidget {
         onTap: () => print(this.category),
         child: Container(
           padding: EdgeInsets.only(top: 15.0, bottom: 15.0, right: 15.0),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(22.0)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
@@ -56,7 +53,7 @@ class AppList extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 25.0,
                               fontWeight: FontWeight.w900,
-                              color: Colors.grey[800],
+                              //color: Colors.grey[800],
                             ),
                           ),
                         ),

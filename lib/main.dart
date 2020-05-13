@@ -16,11 +16,14 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         brightness: Brightness.light,
-        primarySwatch: Colors.green,
+        primaryColor: Colors.grey[800],
+        backgroundColor: Colors.white,
+
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        
+        primaryColor: Colors.white,
+        backgroundColor: Colors.grey[600],
       ),
       home: Home(),
       debugShowCheckedModeBanner: false,
@@ -45,9 +48,14 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).backgroundColor,
       body: SingleChildScrollView(
-        child: Stack(
+        child: SafeArea(
+          top: true,
+          bottom: true,
+          right: false,
+          left: false,
+          child: Stack(
           children: <Widget>[
             Column(
               children: <Widget>[
@@ -74,7 +82,7 @@ class _HomeState extends State<Home> {
                   ),
 
                   height: MediaQuery.of(context).size.height * .40,
-                  padding: EdgeInsets.only(top: 28, left: 30, right: 20),
+                  padding: EdgeInsets.only(top: 08, left: 30, right: 20),
                   child: Column(
                     children: <Widget>[
                       Row(
@@ -237,6 +245,7 @@ class _HomeState extends State<Home> {
 
           ],
         ),
+      ),
       ),
     );
   }

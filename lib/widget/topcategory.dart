@@ -23,10 +23,6 @@ class TopCategory extends StatelessWidget {
         child: Container(
           alignment: Alignment.center,
           padding: EdgeInsets.only(top: 15.0, bottom: 0.0, right: 10.0, left: 10.0),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(40.0),
-          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -52,7 +48,7 @@ class TopCategory extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 26.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.grey[800],
+                            //color: Colors.grey[800],
                           ),
                         ),
                         SizedBox(height: 7.0,),
