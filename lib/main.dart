@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:toolbox/widget/applist.dart';
 import 'package:toolbox/widget/topcategory.dart';
+import 'package:toolbox/pages/settings.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +24,10 @@ class MyApp extends StatelessWidget {
       ),
       home: Home(),
       debugShowCheckedModeBanner: false,
+      routes: <String, WidgetBuilder> {
+        '/home': (BuildContext context) =>  Home(),
+        '/settings': (BuildContext context) =>  SettingsPage(),
+      },
     );
   }
 }
@@ -88,7 +93,19 @@ class _HomeState extends State<Home> {
                               color: Colors.white,
                             ),
                             iconSize: 30.0,
-                            onPressed: () {},
+                            onPressed: () {
+                              //Navigator.of(context).pushReplacementNamed('/search');
+                            },
+                          ),
+                          IconButton(
+                            icon: Icon(
+                              Icons.settings,
+                              color: Colors.white,
+                            ),
+                            iconSize: 30.0,
+                            onPressed: () {
+                              Navigator.of(context).pushReplacementNamed('/settings');
+                            },
                           )
                         ],
                       ),
